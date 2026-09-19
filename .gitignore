@@ -1,0 +1,24 @@
+# Local experiment data
+data/batches/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Node
+node_modules/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Original root copy; organized copy is under research/
+/compost-handover.html

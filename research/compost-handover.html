@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Composting — Handover</title>
+<style>
+  :root{--ink:#1a1c1e;--muted:#5b6166;--line:#dfe3e6;--bg:#fbfaf8;--card:#fff;
+        --accent:#0f6e5c;--warn:#a8541a;--warnbg:#fdf3ea;--okbg:#eef7f3;--red:#c0392b;--redbg:#fdecec;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.65 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
+  .wrap{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+  header{border-bottom:3px solid var(--ink);padding-bottom:18px;margin-bottom:32px}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:2.1rem;line-height:1.15;margin:.25em 0 .2em;letter-spacing:-.02em}
+  .sub{color:var(--muted);font-size:1.02rem;margin:0}
+  h2{font-size:1.3rem;margin:2.4em 0 .6em;letter-spacing:-.01em;border-bottom:1px solid var(--line);padding-bottom:.3em}
+  h3{font-size:1.03rem;margin:1.8em 0 .4em}
+  p{margin:.7em 0}
+  table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:.93rem}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .scroll{overflow-x:auto}
+  .see{background:var(--okbg);border-left:3px solid var(--accent);padding:11px 15px;border-radius:0 6px 6px 0;margin:1em 0;font-size:.95rem}
+  .stop{background:var(--warnbg);border-left:3px solid var(--warn);padding:11px 15px;border-radius:0 6px 6px 0;margin:1em 0;font-size:.95rem}
+  .dead{background:var(--redbg);border-left:3px solid var(--red);padding:11px 15px;border-radius:0 6px 6px 0;margin:1em 0;font-size:.95rem}
+  .task{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 9px 9px 0;padding:16px 18px;margin:1.3em 0}
+  .task h3{margin:0 0 .15em;font-size:1.06rem}
+  .task .meta{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.7em}
+  .task .done{font-size:.9rem;background:var(--okbg);padding:8px 12px;border-radius:6px;margin-top:.9em}
+  .task.p2{border-left-color:var(--muted)}
+  ul{padding-left:20px}
+  li{margin:.4em 0}
+  footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:.87rem;color:var(--muted)}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Vareh · Domains · handover for Majid</div>
+  <h1>Composting: where the research stopped</h1>
+  <p class="sub">Nader sent a full system spec on 2026-09-15. Four days later it is the best-evidenced domain in the vault and the one closest to a <em>no</em> — but the case against that <em>no</em> has never been argued. That is your job.</p>
+</header>
+
+<p>Majid — this is an unfinished job, not a conclusion. Everything here traces to the research dump in the repo under <em>raw / 2026-09-15-compost-research</em>, which is immutable: its README is the index, and two data files hold every finding, source, price and fact-check verdict behind the claims below.</p>
+
+<h2>1 · What arrived</h2>
+
+<p>A spec for a <em>"fully intelligent, automated, modular, self-learning composting reactor"</em> for municipal organic waste, plant waste, sewage sludge and manure. It wants to <strong>sense</strong> 15 parameters (temperature, moisture, O₂, CO₂, CH₄, NH₃, H₂S, CO, N₂O, pH, EC, airflow and pressure, odour, leachate, energy), <strong>act</strong> on five (aeration, water, mixing, leachate recirculation, heat recovery), <strong>judge</strong> maturity — including <em>time remaining until mature</em> — plus sanitization, emissions and full mass, water, energy and carbon balances, <strong>explain</strong> itself through an AI digital twin that talks to a phone, and <strong>run on</strong> solar plus recovered microbial heat. Later: reactor-to-reactor federation into a smart biorefinery.</p>
+
+<p>We kept it whole in the vault and then split it into five layers, which turn out to span three orders of magnitude of difficulty:</p>
+
+<div class="scroll">
+<table>
+  <tr><th>Layer</th><th>What</th><th>Verdict</th></tr>
+  <tr><td><strong>A</strong></td><td>Multi-point temperature, CO₂, mass, airflow, energy</td><td>Real and cheap. About €60 of parts, most of which we own.</td></tr>
+  <tr><td><strong>B</strong></td><td>O₂, NH₃, H₂S, CH₄, CO, pH, EC, odour, leachate</td><td>The sensor graveyard. €50–300 per channel per <em>year</em>.</td></tr>
+  <tr><td><strong>C</strong></td><td>N₂O</td><td>No cheap sensor exists in any technology. €25k–80k instruments.</td></tr>
+  <tr><td><strong>D</strong></td><td>Vessel, blowers, pumps, mixing, heat recovery</td><td>A different company. We said out loud we are not a hardware company.</td></tr>
+  <tr><td><strong>E</strong></td><td>Federation, biorefinery integration, voice</td><td>Park it. We have run zero reactors.</td></tr>
+</table>
+</div>
+
+<h2>2 · What the research found</h2>
+
+<p>Forty-six agents across two sweeps — one on what can be built, one on who would buy it — with every research agent followed by an independent one told to refute it. The supply side came back solid with corrections. The demand side came back with six no's out of six.</p>
+
+<div class="stop"><b>The method's own bias, stated up front.</b> Those adversarial agents were instructed that a well-evidenced <em>no</em> is the most valuable output. Six out of six is therefore partly an artifact of the instruction. The <em>reasons</em> are statute and published fee schedules rather than attitude — but nobody has run the mirror-image sweep. Hence M1.</div>
+
+<h3>Nobody in the chain buys this</h3>
+
+<ul>
+  <li><strong>The operator cannot keep a saving.</strong> German municipal waste-fee law caps fees at cost and forces surpluses back to citizens within four to five years — ENNI Moers is refunding €1.61m right now. Capex, meanwhile, enters the fee base and earns imputed interest. The system rewards buying assets and punishes operational savings, which inverts the spec's "minimise energy" pitch.</li>
+  <li><strong>The numbers are too small anyway.</strong> Aeration energy is €0.68–3.17 per tonne. Gate fees are €100–205 per tonne. A 20 % energy saving is a rounding error next to one rejected load.</li>
+  <li><strong>The compliance wedge is occupied by the referee.</strong> Law does mandate continuous automated temperature recording — discharged by the controller the plant already owns. And in March 2026 the certifier BGK launched its own free portal for sampling plans and certificates, with annual data collection moving into it exclusively from 2027. Ten quarterly issues of the sector's own journal mention contamination 147 times and documentation burden zero times.</li>
+  <li><strong>The closest analogue is a cautionary tale.</strong> A UK company sells the identical probe-plus-compliance-software concept under the same regime. Twenty-five years in: 2 employees, £549,659 of net liabilities.</li>
+  <li><strong>Biochar carbon accounting is already partitioned against us.</strong> The certifier calculates production emissions itself and leaves downstream logistics to third-party vendors — so everything sensing-shaped sits on the certifier's side of the line.</li>
+  <li><strong>The comparison that explains it.</strong> In EU tender records since 2022: 115 notices for wastewater plants plus process control, and zero for composting plus anything sensing-shaped. Wastewater — technically the same problem of controlling aeration from gas sensors — buys process control at scale. Composting does not.</li>
+</ul>
+
+<h3>And two of our own claims were wrong</h3>
+
+<div class="dead">
+<p style="margin-top:0"><strong>ATB has no composting site.</strong> Fourteen research facilities listed, none of them a composting reactor, hall or pad, and no composting procurement in ten years of tender records. Nader's own programme is HTC and humification — minutes-scale thermochemistry, a <em>competing</em> route to humic substances, not three-week biology.</p>
+<p style="margin-bottom:0"><strong>German procurement law bars Nader from being the buyer.</strong> A person with a direct or indirect interest may not take part in a procurement, and ATB's own notices list exactly that conflict as an exclusion ground. The warm door is not cold — it is a legal disqualification. <em>All of this is inference from public records. Nobody has asked him directly.</em></p>
+</div>
+
+<p>Those two, plus the demand findings, dropped the domain score from <strong>18 to 13</strong> — team fit 5 → 2, willingness to pay 3 → 1. The old row is struck through in the vault note rather than deleted.</p>
+
+<h3>The physics that does not negotiate</h3>
+
+<div class="scroll">
+<table>
+  <tr><th>Finding</th><th>What it forces</th></tr>
+  <tr><td><strong>No gas sensor is rated for compost exhaust.</strong> Electrochemical cells stop at 50 °C and 90 % humidity, non-condensing. Compost exhaust is 55–70 °C and saturated. The manufacturer's own note says the housing seal can fail and the electrolyte leak.</td><td>The sensor never sees raw gas. Either a conditioned sample line, or keep only an oxygen probe and a temperature lance in the pile.</td></tr>
+  <tr><td><strong>Continuous NH₃ and H₂S measurement is a consumables treadmill.</strong> The cells have a finite exposure budget — days to weeks in compost, not years — and they fail <em>invisibly</em>, putting out plausible numbers as sensitivity decays.</td><td>Duty-cycle them, or drop continuous measurement for rented campaigns.</td></tr>
+  <tr><td><strong>Moisture in a solid heterogeneous matrix has no sensor.</strong> Every method reads water, solids <em>and air</em> together, so settling looks identical to drying. The market agrees: the vendor with 250+ reference plants and a full sensor package sells no moisture sensor.</td><td>Compute it from a load-cell water balance and publish the ±5 % honestly. Use probes as relative indicators only.</td></tr>
+  <tr><td><strong>A 1 m³ pilot is a bad place to prove sanitisation or heat recovery.</strong> Surface-to-volume heat loss at that scale needs supplementary heating in cold weather, and the law wants 55 °C for two weeks through the <em>entire</em> mass.</td><td>Split those claims across scales, or rent a container-scale test rig. (See M3 — the sweep's first version of this finding was overstated and got corrected.)</td></tr>
+  <tr><td><strong>Off-grid solar is arithmetically dead at this latitude.</strong> Potsdam gives 0.93 kWh per kWp per day in December against 4.35 in June, while the blower load is flat. Covering December costs €16–25k to avoid €666 a year of grid electricity.</td><td>Grid-connect. The honest renewable story is recovered heat, not PV.</td></tr>
+  <tr><td><strong>Law mandates continuous measurement of exactly one variable: temperature.</strong> Nothing requires continuous O₂, CO₂, CH₄, NH₃, H₂S, N₂O, pH, EC, airflow or odour at a composting plant.</td><td>Roughly 90 % of the proposed array is discretionary spend from the operator's point of view.</td></tr>
+  <tr><td><strong>The tightly-controlled sibling industry disagrees with the array.</strong> Mushroom compost — the most controlled composting on earth — runs on four to six temperature points and <em>one</em> oxygen probe.</td><td>The 15-parameter array is not a stretch goal. It is a different and probably worse design.</td></tr>
+  <tr><td><strong>The published maturity models are an evaluation artifact.</strong> Twelve-plus papers report R² of 0.90–0.99. Re-tested on the one public dataset, the same model scores 0.83 on a random split but <strong>0.37 when you group by batch</strong>.</td><td>0.75–0.80 is the realistic ceiling. And our own benchmark must group by batch or it will flatter us the same way.</td></tr>
+  <tr><td><strong>Lab reference samples, not sensors, are the binding cost.</strong> One instrumented batch yields six to eight labelled rows and needs six to eight full analytical panels.</td><td>You cannot sensor your way out of a label shortage. More channels add features, not labels.</td></tr>
+</table>
+</div>
+
+<div class="see"><b>One thing survived all of it.</b> Nobody sells "time remaining until mature", with the reasoning shown. Every verified commercial product sells the same three things: temperature probes, aeration control, and an automatic compliance record. Maturity today is an offline lab test that takes days to weeks. Predicting that endpoint from a cheap continuous stream is a falsifiable research question with a published ground truth — the paper track, and the one part of the spec that is actually ours.</div>
+
+<h2>3 · What nobody has written yet</h2>
+
+<ul>
+  <li><strong>The opposite case has never been argued.</strong> Six agents were told to find reasons this fails; six found them. No agent was ever told to find the strongest reason it works.</li>
+  <li><strong>The supply-side synthesis exists only as raw data.</strong> Seventeen angles, 430 references, 343 prices, 146 hard problems — none of it in a vault note. The domain note covers the demand sweep and says outright that the supply side is still being digested.</li>
+  <li><strong>Four questions for Nader are written and unasked</strong> (Open Questions D5): does ATB own an N₂O analyser; is there any vessel from a 200 L drum upward that could host a read-only shadow monitor; how does his lab decide a compost is mature today; and who signs the sanitization document. Moha owns asking — don't duplicate it. But the last one names the first buyer, and M1 needs that answer.</li>
+</ul>
+
+<h2>4 · Your tasks</h2>
+
+<p>Ordered by how much they change the decision. M1 and M2 are the handover proper.</p>
+
+<div class="task">
+  <h3>M1 · Argue the opposite case</h3>
+  <div class="meta">The highest-value one · about half a day</div>
+  <p>Build the strongest honest <em>yes</em> from the same evidence and see whether it survives. Threads already visible in the dump:</p>
+  <ul>
+    <li>The fee-law argument says a <em>municipal</em> operator cannot keep a saving. It says nothing about a private plant, a contractor bidding a treatment tender, or a plant outside Germany.</li>
+    <li>One €4.2m treatment tender made a quality certificate a suitability criterion — the single place where monitoring touches revenue directly.</li>
+    <li>Zero tender notices is evidence of no public procurement, not of no market. Nobody tenders for a €5k software seat.</li>
+    <li>The certifier shipping a free portal proves the artifact is wanted. It constrains who sells it, not whether it is wanted.</li>
+  </ul>
+  <div class="done"><b>Done looks like:</b> a section appended to the domain note under your name and date, with your verdict on whether the yes beats the no. Vault rule: append, never rewrite someone's position.</div>
+</div>
+
+<div class="task">
+  <h3>M2 · Write up the supply side</h3>
+  <div class="meta">The missing note · about a day</div>
+  <p>Turn seventeen angles of raw research into one honest note. The spine is already visible and worth stating as the conclusion: <strong>split the 15 parameters into three registers.</strong> <em>Control</em> — temperature profile, exhaust O₂ and CO₂, inlet airflow; that is the loop, and it is all the mature analogues use. <em>Compliance</em> — the daily temperature log the law actually mandates, plus periodic emissions campaigns. <em>Research</em> — N₂O, PFAS, microplastics, bioaerosols; campaign-only, lab-analysed, never claimed as online.</p>
+  <p>Include the two cheap things that need nobody's permission: the <strong>€60 bucket rig</strong> (temperature chain at three depths, the CO₂ sensor we already own on the exhaust, a load cell underneath) and a <strong>compost twin in the lab folder</strong> — about fifteen published equations as a Python model, in the mould of the artificial farm, with a hidden answer key. The twin needs zero hardware and gives the LLM layer something to be graded against.</p>
+  <div class="done"><b>Done looks like:</b> a new note, linked from the domain note and from Home, that a stranger could read instead of the raw data.</div>
+</div>
+
+<div class="task">
+  <h3>M3 · Audit the research for the leaks you are already hunting</h3>
+  <div class="meta">Your speciality · about two hours</div>
+  <p>You have an open question (T5) about how the artificial-farm benchmark cheats. Same instinct, new target. The fact-check pass produced 282 confirmed claims, 123 corrected, 29 unverifiable, <strong>18 outright false</strong>, and 111 dead links. Each angle in the data carries its own verdict list, so the false and corrected ones are already tagged — no searching required.</p>
+  <p>The question is not whether there were errors. It is <strong>whether any false or corrected claim leaked into the vault note anyway</strong>, and whether anything load-bearing rests on a dead link.</p>
+  <div class="dead"><b>One already found, while writing this page.</b> The claim that a 1 m³ pilot is "physically incoherent" because small composting machines are net heat consumers is marked <em>false</em> by the fact-checker: those heaters are thermostatic cold-weather pre-heaters, and the energy figures quoted against them already exclude them. Four more sit in that same angle — a machine credited with ten temperature sensors that has three, a lab-reactor size range that appears nowhere in the cited paper, a heat-recovery "measurement" that is the same number restated in different units, and a reference whose DOI resolves to a paper about bioethanol. If one angle leaks five, assume the others do too.</div>
+  <div class="done"><b>Done looks like:</b> a list of vault claims that trace to a false, corrected or dead source. Each gets fixed or flagged for verification.</div>
+</div>
+
+<div class="task">
+  <h3>M4 · Reproduce the batch-grouped collapse</h3>
+  <div class="meta">Runnable data work · about three hours</div>
+  <p>The load-bearing technical claim in the whole domain, and the one you can check yourself in an afternoon. There is one public compost dataset — 452 rows, 63 batches, behind a paper claiming R² of 0.99. The sweep reports that an identical model gives <strong>0.83 on a random row split but 0.37 when held out by batch</strong>, with nine batches scoring worse than predicting the mean.</p>
+  <p>If that holds, every published compost-maturity score is measuring memorisation of adjacent days in the same pile. If it does not, the paper track is in much better shape than the note currently claims. Moha has the dataset reference.</p>
+  <div class="done"><b>Done looks like:</b> a number, a script in the lab folder, and a one-line verdict. Either answer is worth having.</div>
+</div>
+
+<div class="task">
+  <h3>M5 · Re-run the tender search yourself</h3>
+  <div class="meta">Verification · about an hour</div>
+  <p>"115 notices for wastewater plus process control, zero for composting plus anything sensing-shaped" carries more weight than any other single fact in the demand case. It is also the easiest to get wrong — search terms, procurement codes, date ranges and language variants all move the answer. Try the German words for composting plant, biowaste treatment plant, rotting control and measurement technology, not just the two used.</p>
+  <div class="done"><b>Done looks like:</b> confirmed, or corrected — with your query written down so the next person can re-run it.</div>
+</div>
+
+<div class="task p2">
+  <h3>M6 · Price the three survivors</h3>
+  <div class="meta">Optional · open-ended</div>
+  <p>Three things survived the demand sweep, all small and all honest: selling to the ~40 approved compost labs, who have a real logistics problem and can actually buy software; paid integration subcontracting to an established carbon-accounting provider, which would put us inside a real site; and a paid discovery contract — charge €3–5k to write up what a plant's quality officer actually does in a year. That last one is itself the cheapest willingness-to-pay test we have. None has been sized.</p>
+  <div class="done"><b>Done looks like:</b> a paragraph each in Business Angles — or a note that they are not worth sizing yet.</div>
+</div>
+
+<h2>5 · Don't redo these</h2>
+
+<ul>
+  <li><strong>Don't shop for a better gas sensor.</strong> Seventeen angles and 296 compared options went looking. It is the physics of a liquid electrolyte in a condensing sample, not a gap in the catalogue.</li>
+  <li><strong>Don't look for open-source compost software.</strong> The whole GitHub corpus was enumerated. The top-starred repo contains a README and a spreadsheet, zero code. Reuse nothing compost-specific.</li>
+  <li><strong>Don't cite a price without opening the link.</strong> 111 dead URLs, and five of twenty company leads are dead or renamed.</li>
+  <li><strong>Don't edit anything under the raw folder.</strong> It is immutable by convention. Corrections go in notes that cite it.</li>
+  <li><strong>Don't treat the AI as the expensive part.</strong> It is the cheapest line in the system — a few dollars per site per month, against €300 for one lab sample.</li>
+</ul>
+
+<h2>6 · Where this leaves us</h2>
+
+<p>The engineering decomposition survived the research. The market read did not. On current evidence nobody in the composting chain buys this: the operator cannot keep a saving, the certifier ships the compliance product for free, the research institute has no rig and is legally barred from being the customer, and the one adjacent market where measurement converts to revenue has already claimed the sensing half.</p>
+
+<p><strong>That is not yet a no.</strong> It is a well-evidenced case for one, assembled by agents rewarded for finding it, and never argued against. Argue against it — and if it survives you, we write it down as a no <em>with reasons</em>, which is worth more to this vault than another maybe.</p>
+
+<div class="stop"><b>The falsifier still stands.</b> If temperature, CO₂ and mass from a €60 rig predict the offline maturity test no better than "days since setup", the interpretation claim for this domain is dead, and no number of extra channels saves it. M4 is the desk-bound half of that same test — if batch-grouped validation already says the published models are memorising, we learn most of the answer before touching a bucket.</div>
+
+<footer>
+  <p><strong>Vareh · handover to Majid Fayezi · 2026-09-19</strong><br>
+  Vault note: <em>02 Domains / Composting &amp; Organic Waste</em> · Raw evidence: <em>raw / 2026-09-15-compost-research</em> (the README is the index) · Related: <em>Domain Scorecard</em>, <em>Sensing 101</em>, <em>Open Questions</em> D5 and D6, <em>Risks &amp; Honest Doubts</em>.</p>
+  <p>Every figure here traces to that dump. Where the dump flagged its own uncertainty, so does this page.</p>
+</footer>
+
+</div>
+</body>
+</html>
