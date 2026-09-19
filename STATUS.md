@@ -1,5 +1,17 @@
 # Project handover status
 
+## Resume in a new Codex session
+
+Open this local folder:
+
+`C:\Users\majid\Desktop\Mehrsaa\ai_project\nader_automation`
+
+GitHub repository: `https://github.com/majid-fa/smart-compost-mvp`
+
+Tell Codex: **"Read README.md and STATUS.md, then continue the Smart Compost MVP from the next actions."**
+
+The repository is private. A friend's GitHub username is still needed before they can be invited.
+
 ## Last completed decision
 
 The MVP will use automatic airflow. Temperature and CO2 readings feed an AI agent that can request an airflow state. The hardware controller applies safety rules and operates a variable-speed blower plus a motorized inlet damper. The exhaust stays permanently open.
@@ -35,4 +47,3 @@ The MVP will use automatic airflow. Temperature and CO2 readings feed an AI agen
 - Manual override and fallback control work.
 - Every reading, AI request, accepted command, rejected command, and reason is saved.
 - Batch inputs, water, mixing, and maturity-test results are recorded.
-
